@@ -15,9 +15,6 @@ print("The title of the page is:", title)
 # Step 1: Find all quotes on the page
 quotes = soup.find_all('span', class_='text')
 
-# print(quotes)
+for i in set(quotes):
+    print(i.text)
 
-# Step 2: Print a random quote
-import random
-random_quote = random.choice(quotes)
-print("Random Quote:", random_quote.text)
